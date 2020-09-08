@@ -17,7 +17,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'jsGiphy',
+      title: 'jsgiphy',
       template: './src/index.html',
       inject: 'body'
     })
