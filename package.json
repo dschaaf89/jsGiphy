@@ -1,7 +1,7 @@
 {
-  "name": "***************** Title ***********",              
+  "name": "giphy",
   "version": "1.0.0",
-  "description": " ******************** Description **************",      
+  "description": "An application that allows users to search Giphy for interesting GIFs, Including Trending, and Random GIFs.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",

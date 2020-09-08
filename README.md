@@ -1,12 +1,12 @@
-# _Application Name_
+# _jsGiphy_
 
-#### _Brief description of application, Date of current version_
+#### _API and XHR Exercise for Epicodus, Sept 8th, 2020_
 
-#### By _**List of contributors**_
+#### By _**Mike Manchee and Daniel Schaaf**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+An application that allows users to search Giphy for interesting GIFs, Including Trending, and Random GIFs.
 
 ### Specs
 | Spec | Input | Output |
@@ -22,15 +22,14 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
-
-## Support and contact details
-
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+No known bugs
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+* API - Application Programming Interface
+* XHR - XMLHTTPRequest
+* Giphy API click [here](https://developers.giphy.com/docs/sdk) for documentation.
+
 * HTML
 * CSS
   * Bootstrap
@@ -42,5 +41,5 @@ _{Tell me about the languages and tools you used to create this app. Assume that
 
 ### License
 
-Copyright (c) 2020 **_{List of contributors or company name}_**
-Licenced under MIT
+Copyright (c) 2020 **_{Mike Manchee and Daniel Schaaf}_**
+Licensed under MIT

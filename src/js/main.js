@@ -4,19 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './../css/styles.css';
 
 $(document).ready(function () {
-  $("#").submit(function (event) {
+  $("#search").click(function (event) {
     event.preventDefault();
-    const search = $("#").val();
+    const search = $("#image").val();
 
     const url = `api.giphy.com/v1/gifs/search?api_key${apikey}&q=${search}`;
-    const url2 = `api.giphy.com/v1/gifs/trending?api_key${apikey}`;
-    const url3 = `api.giphy.com/v1/gifs/random?api_key${apikey}`;
-
-    const array = [url, url2, url3];
-
+    
     let request = new XMLHttpRequest();
-
-    for (let i = 0; i < array.length; i++) {
       request.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           const response = JSON.parse(this.responseText);
@@ -24,22 +18,55 @@ $(document).ready(function () {
           ;
         }
       };
-      request.open("GET", array[i], true);
+      request.open("GET", url, true);
       request.send();
-    }
 
-    function getSearch(response) {
-      for (let )
-    }
+      function getSearch(response) {
+        let image;
+        for (let i = 0; i < 16; i++) {
+          let image = `<img src=${response.data[i].images.downsized_small.url}>`
+          $("#image" + (i + 1)).html(image);
+        }
+      }
+  });
+  $("#trending").click(function (event) {
+    event.preventDefault();
 
+    const url = `api.giphy.com/v1/gifs/trending?api_key${apikey}`;
+
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        const response = JSON.parse(this.responseText);
+        getTrending(response);
+      }
+    };
+    request.open("GET", url, true);
+    request.send();
+    
     function getTrending(response) {
 
     }
+  });
+  $("#random").click(function (event) {
+    event.preventDefault();
+
+    const url3 = `api.giphy.com/v1/gifs/random?api_key${apikey}`;
+
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        const response = JSON.parse(this.responseText);
+        getRandom(response);
+      }
+    };
+    request.open("GET", url, true);
+    request.send();
 
     function getRandom(response) {
 
     }
-  })
+  });  
 });
 
 
